@@ -313,6 +313,12 @@ img[src*=".svg"] {
         padding-bottom: 2rem;
     }
 }
+
+@media (max-width: 768px) and (max-height: 1024px) {
+    .intro-banner {
+        display: none !important;
+    }
+}
 /* ends */
 
 /* Navbar */
