@@ -555,13 +555,15 @@ img[src*=".svg"] {
     .home-text h1 {
         font-size: 1.8rem;
     }
-    .name{
+    .name {
         font-size: 2.2rem;
     }
     .profile-img {
         height: 160px;
         width: 160px;
     }
+    
+    /* Better spacing for small screens */
     .home-content {
         padding: 1.5rem 1rem;
         gap: 1.5rem;
@@ -577,8 +579,8 @@ img[src*=".svg"] {
     
     .socials a {
         font-size: 1.4rem;
+    }
 }
-
 /* ends */
 
 /* About Section */
@@ -874,7 +876,7 @@ img[src*=".svg"] {
 
 @media (max-width: 600px) {
     .about {
-        padding: 80px 1.5vw 60px 1.5vw;
+        padding: 80px 1.5rem 60px 1.5rem;
     }
     
     .section-title {
@@ -1685,14 +1687,15 @@ img[src*=".svg"] {
 } 
 /* ends */
 
-/* Mobile-Friendly */
+/* Mobile-First Improvements */
 @media (max-width: 768px) {
+    /* General mobile improvements */
     body {
         font-size: 16px;
         line-height: 1.6;
     }
     
-/* Navbar */
+    /* Navbar mobile improvements */
     .navbar {
         padding: 0.8rem 1rem;
     }
@@ -1707,7 +1710,7 @@ img[src*=".svg"] {
         padding: 0.4rem 0;
     }
     
-/* Home section */
+    /* Home section mobile improvements */
     .home {
         padding-top: 70px;
         min-height: 100vh;
@@ -1769,7 +1772,7 @@ img[src*=".svg"] {
         width: 180px;
     }
     
-/* About section */
+    /* About section mobile improvements */
     .about {
         padding: 80px 1.5rem 60px 1.5rem;
     }
@@ -1824,7 +1827,7 @@ img[src*=".svg"] {
         line-height: 1.6;
     }
     
-/* Skills section */
+    /* Skills section mobile improvements */
     .skills-section {
         padding: 2rem 1.5rem;
         border-radius: 15px;
@@ -1873,7 +1876,7 @@ img[src*=".svg"] {
         font-weight: 500;
     }
     
-/* Testimonials */
+    /* Testimonials mobile improvements */
     .testimonials {
         padding: 4rem 1.5rem;
     }
@@ -1908,7 +1911,7 @@ img[src*=".svg"] {
         font-size: 0.9rem;
     }
     
-/* Certificates */
+    /* Certificates mobile improvements */
     .certificates {
         padding: 4rem 1.5rem;
     }
@@ -1946,7 +1949,7 @@ img[src*=".svg"] {
         line-height: 1.5;
     }
     
-/* Contact */
+    /* Contact mobile improvements */
     .contact {
         padding: 4rem 1.5rem;
     }
@@ -1990,7 +1993,7 @@ img[src*=".svg"] {
         font-size: 1.2rem;
     }
     
-/* Footer */
+    /* Footer mobile improvements */
     .footer {
         padding: 25px 0;
     }
@@ -2005,8 +2008,9 @@ img[src*=".svg"] {
     }
 }
 
-/* Additional */
+/* Additional Mobile Enhancements */
 @media (max-width: 768px) {
+    /* Touch-friendly improvements */
     .nav-links li a,
     .socials a,
     .skill-item,
@@ -2019,6 +2023,7 @@ img[src*=".svg"] {
         min-width: 44px;
     }
     
+    /* Better spacing for mobile */
     .home-text {
         margin-bottom: 1rem;
     }
@@ -2035,6 +2040,7 @@ img[src*=".svg"] {
         margin-bottom: 1.5rem;
     }
     
+    /* Improved social icons spacing */
     .socials {
         justify-content: center;
         flex-wrap: wrap;
@@ -2057,6 +2063,7 @@ img[src*=".svg"] {
         border-color: rgba(147, 115, 217, 0.4);
     }
     
+    /* Better section spacing */
     .about,
     .testimonials,
     .certificates,
@@ -2064,6 +2071,7 @@ img[src*=".svg"] {
         margin-top: 0;
     }
     
+    /* Improved card spacing */
     .about-box,
     .testimonial-box,
     .certificate-box,
@@ -2071,6 +2079,7 @@ img[src*=".svg"] {
         margin-bottom: 1rem;
     }
     
+    /* Better text readability */
     .about-box p,
     .testimonial-content p,
     .certificate-description,
@@ -2080,6 +2089,7 @@ img[src*=".svg"] {
         hyphens: auto;
     }
     
+    /* Improved journey timeline */
     .journey-item {
         position: relative;
         padding-left: 1rem;
@@ -2104,6 +2114,7 @@ img[src*=".svg"] {
         border-image: linear-gradient(135deg, #6B21A8, #9373D9) 1;
     }
     
+    /* Better skill items layout */
     .skill-items {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -2120,6 +2131,7 @@ img[src*=".svg"] {
         text-align: center;
     }
     
+    /* Improved certificate carousel */
     .certificates-wrapper {
         padding: 0 1rem;
     }
@@ -2128,6 +2140,7 @@ img[src*=".svg"] {
         gap: 1.5rem;
     }
     
+    /* Better contact layout */
     .contact-box {
         margin-top: 2rem;
     }
@@ -2137,10 +2150,12 @@ img[src*=".svg"] {
         margin-bottom: 1rem;
     }
     
+    /* Improved footer */
     .footer-content {
         text-align: center;
     }
     
+    /* Better navigation */
     .navbar {
         position: fixed;
         top: 0;
@@ -2159,10 +2174,12 @@ img[src*=".svg"] {
         margin: 0 0.5rem;
     }
     
+    /* Improved scroll behavior */
     html {
         scroll-padding-top: 80px;
     }
     
+    /* Better focus states for accessibility */
     .nav-links li a:focus,
     .socials a:focus,
     .skill-item:focus,
@@ -2186,7 +2203,7 @@ img[src*=".svg"] {
         opacity: 0.7;
     }
     
-    /* Better animation */
+    /* Better animation performance */
     .animate-on-scroll,
     .animate-on-scroll-left,
     .animate-on-scroll-right,
