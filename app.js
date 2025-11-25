@@ -1,38 +1,3 @@
-// Intro Overlay Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const introBanner = document.getElementById('introBanner');
-    let introTriggered = false;
-
-    // Function to trigger intro animation
-    function triggerIntro() {
-        if (introTriggered) return;
-        
-        introTriggered = true;
-        introBanner.classList.add('slide-up');
-        
-        // Remove the overlay from DOM after animation completes
-        setTimeout(() => {
-            introBanner.style.display = 'none';
-        }, 1200);
-    }
-
-    // Keyboard event listener
-    document.addEventListener('keydown', function(event) {
-        // Only prevent default behavior and trigger intro if overlay is visible
-        if (!introTriggered && introBanner.style.display !== 'none') {
-            event.preventDefault();
-            triggerIntro();
-        }
-    });
-
-    // Click event listener
-    introBanner.addEventListener('click', function(event) {
-        triggerIntro();
-    });
-
-
-});
-
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -207,3 +172,4 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 });
+
