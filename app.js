@@ -1,3 +1,66 @@
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+    
+    if (hamburger && navLinks) {
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+        
+        function openMenu() {
+            hamburger.classList.add('active');
+            navLinks.classList.add('active');
+            document.body.classList.add('menu-open');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+        
+        hamburger.addEventListener('click', function() {
+            if (navLinks.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        // Close menu when clicking on a link
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Close menu when clicking outside navbar
+        document.addEventListener('click', function(e) {
+            if (!navLinks.classList.contains('active')) return;
+            
+            const isClickInsideNavLinks = navLinks.contains(e.target);
+            const isClickOnHamburger = hamburger.contains(e.target);
+            
+            if (!isClickInsideNavLinks && !isClickOnHamburger) {
+                closeMenu();
+            }
+        });
+        
+        // Close menu on window resize (if menu is open and screen becomes larger)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    }
+});
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
